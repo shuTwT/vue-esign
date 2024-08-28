@@ -4,10 +4,7 @@
 
 ![npm](https://img.shields.io/npm/dm/vue-esign) ![GitHub package.json version](https://img.shields.io/github/package-json/v/jaimecheng/vue-esign)
 
-## 时隔三年的更新！！支持vue3
-- **支持vue3！！！！更新依赖后，仅`bgColor`原来的`.sync`修饰符需改为vue3写法`v-model:bgColor`**;
-- 新增属性 `isClearBgColor`，默认值`true`， 清空画布时(reset)是否同时清空设置的背景色(bgColor) ；
-- 直接`npm install vue-esign@latest --save`即可，对vue2版本无任何影响；
+## 支持vue2和vue3
 ## 功能
 1. 兼容 PC 和 Mobile；
 2. 画布自适应屏幕大小变化（窗口缩放、屏幕旋转时画布无需重置，自动校正坐标）；
@@ -19,24 +16,33 @@
 ## 安装
 
 ``` bash
-npm install vue-esign --save
+npm install @shutwt/vue-esign #如果你用npm
+yarn add @shutwt/vue-esign #如果你用yarn
+pnpm add @shutwt/vue-esign #如果你用pnpm
+bun add @shutwt/vue-esign #如果你用bun
 ```
 
 ## 使用
 1. 全局使用 、局部
 ```js
 // 全局 vue2 main.js
-import vueEsign from 'vue-esign'
-Vue.use(vueEsign)
+import vueEsign from '@shutwt/vue-esign'
+import '@shutwt/vue-esign/dist/style.css'
+Vue.component('vue-esign',vueEsign)
 // 全局vue3 main.js
 import { createApp } from 'vue'
 import App from './App.vue'
-import vueEsign from 'vue-esign'
+import vueEsign from '@shutwt/vue-esign'
+import '@shutwt/vue-esign/dist/style.css'
 const app = createApp(App)
-app.use(vueEsign)
+app.component('vue-esign',vueEsign)
 // 局部
-import vueEsign from 'vue-esign'
-components: { vueEsign }
+import vueEsign from '@shutwt/vue-esign'
+//如果是选项式api
+export default {
+    components: { vueEsign }
+}
+
 ```
 2. 页面中使用
     **必须设置 `ref` ，用来调用组件的两个内置方法 `reset()` 和 `generate()`**

@@ -4,7 +4,7 @@
       <vue-esign class="esignature" ref="esign" :width="800" :height="300" :isCrop="isCrop" :lineWidth="lineWidth" :lineColor="lineColor" :bgColor.sync="bgColor" />
     </div>
     <div class="esigh-btns">
-      <button @click="handleReset">清空画板</button> 
+      <button @click="handleReset">清空画板</button>
       <button @click="handleGenerate">生成图片</button>
     </div>
     <div class="esigh-result">
@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 
 export default {
   name: 'App',
@@ -57,11 +57,11 @@ export default {
   outline: none;
   border-radius: 4px;
   background: #F60;
-  border: 1px solid transparent; 
+  border: 1px solid transparent;
 }
-.esigh-btns button:active{ 
-  color:#fff; 
-  box-shadow: 0px 0px 50px orangered inset; 
+.esigh-btns button:active{
+  color:#fff;
+  box-shadow: 0px 0px 50px orangered inset;
 }
 .esigh-result {
   margin-top: 10px;

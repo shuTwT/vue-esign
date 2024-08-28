@@ -3,8 +3,9 @@
   @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd"></canvas>
 </template>
 
-<script>
+<script lang="ts">
 export default {
+  name:"VueEsign",
   props: {
     width: {
       type: Number,
