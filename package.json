@@ -1,7 +1,7 @@
 {
   "name": "@shutwt/vue-esign",
   "description": "A canvas signature component of vue",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "author": "shuTwT <1324073644@qq.com>",
   "license": "MIT",
   "main": "./index.cjs",
@@ -15,10 +15,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/JaimeCheng/vue-esign"
+    "url": "https://github.com/shuTwT/vue-esign"
   },
   "bugs": {
-    "url": "https://github.com/JaimeCheng/vue-esign/issues"
+    "url": "https://github.com/shuTwT/vue-esign/issues"
   },
   "homepage": "https://jaimecheng.github.io/vue-esign/demo/",
   "keywords": [
@@ -40,14 +40,14 @@
     "LICENSE",
     "README.md"
   ],
-  "peerDependencies": {
-    "vue": "^2.5.11 || ^3.2.0"
-  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
   ],
+  "peerDependencies": {
+    "vue": "^2.5.11 || ^3.2.0"
+  },
   "devDependencies": {
     "@types/node": "^22.5.1",
     "@vitejs/plugin-vue": "^5.1.2",

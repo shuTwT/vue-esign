@@ -28,14 +28,14 @@ bun add @shutwt/vue-esign #如果你用bun
 // 全局 vue2 main.js
 import vueEsign from '@shutwt/vue-esign'
 import '@shutwt/vue-esign/dist/style.css'
-Vue.component('vue-esign',vueEsign)
+Vue.use(vueEsign)
 // 全局vue3 main.js
 import { createApp } from 'vue'
 import App from './App.vue'
 import vueEsign from '@shutwt/vue-esign'
 import '@shutwt/vue-esign/dist/style.css'
 const app = createApp(App)
-app.component('vue-esign',vueEsign)
+app.use(vueEsign)
 // 局部
 import vueEsign from '@shutwt/vue-esign'
 //如果是选项式api
